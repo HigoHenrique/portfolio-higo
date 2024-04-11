@@ -1,6 +1,6 @@
 export default function Footer() {
     return(
-        <div className=" mx-auto flex justify-center">
+        <div className=" lg:mx-auto lg:flex lg:justify-center">
             <p>© Copyright - Higo Henrique Da Silva</p>
         </div>
     )

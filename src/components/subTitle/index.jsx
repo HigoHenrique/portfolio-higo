@@ -3,7 +3,7 @@ import socialMedia from "@/constants/links.json"
 
 export default function SubTitle() {
     return (
-        <div className="mt-6 text-lg leading-8">
+        <div className="lg:mt-6 lg:text-lg lg:leading-8">
             {socialMedia.map((item, index) => {
                 return (
                     <Button
