@@ -5,9 +5,9 @@ import { TECH_QUERY } from "@/services/datocms/gql/queries";
 export default async function Tech() {
     const { data: { allTeches } } = await performRequest({ query: TECH_QUERY });
     return (
-        <div className="rounded-md lg:py-5 lg:my-5">
-        <h2 className="lg:py-5 font-bold mx-auto text-center lg:text-4xl">Principais Linguagens</h2>
-        <div className="lg:flex lg:flex-row lg:w-30 lg:h-30 lg:justify-center mx-auto lg:py-10 lg:p-5">
+        <div className="rounded-md py-5 my-5">
+        <h2 className="lg:py-5 font-bold mx-auto text-center lg:text-4xl text-3xl">Principais Linguagens</h2>
+        <div className="grid grid-cols-4 w-80 gap-2 mt-14 lg:my-2 lg:grid-cols-5 lg:gap-0 lg:w-2/5 lg:h-auto lg:justify-center mx-auto lg:py-10 lg:p-5">
             {allTeches.map(tech => {
                 return (
                     <div className="lg:mx-5 animate-bounce" key={tech.id}>

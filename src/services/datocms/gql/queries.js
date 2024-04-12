@@ -3,7 +3,7 @@ export const TECH_QUERY = `query MyQuery {
       name
       id
       image {
-        responsiveImage(imgixParams: {fit: scale, h: "100", w: "100", auto: format}) {
+        responsiveImage(imgixParams: {fit: scale, h: "400", w: "400", auto: format}) {
           src
           title
           width
@@ -59,7 +59,7 @@ export const CARD_PROJECT_QUERY = `query MyQuery {
     active
     linkSite
     siteImage {
-      responsiveImage(imgixParams: {h: "500", w: "500", fit: scale, auto: format}) {
+      responsiveImage(imgixParams: {h: "300", w: "600", fit: scale, auto: format}) {
         src
         title
         width

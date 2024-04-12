@@ -1,7 +1,7 @@
 export default function Footer() {
     return(
-        <div className=" lg:mx-auto lg:flex lg:justify-center">
-            <p>© Copyright - Higo Henrique Da Silva</p>
+        <div className="mb-2 lg:mx-auto lg:flex text-center lg:justify-center">
+            <p className="font-extralight">© Copyright - Higo Henrique Da Silva</p>
         </div>
     )
 };

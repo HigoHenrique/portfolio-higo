@@ -5,15 +5,15 @@ import Carousel from "@/components/carousel";
 
 export default function Home() {
   return (
-    <div className="lg:flex lg:flex-row lg:mx-auto lg:w-auto sm:py-40 lg:py-40">
-      <div className="lg:text-center lg:align-middle">
+    <div className="lg:mx-auto lg:pt-20 py-5 lg:text-center lg:align-middle">
         <Title />
         <SubTitle />
-        <div className="shadow-md shadow-h-blue-1">
+        <div className=" border-b-2 border-h-blue-1/25">
             <Tech/>
-            <Carousel/>
           </div>
-      </div>
+          <div className="w-full block">
+          <Carousel/>
+          </div>
     </div>
   );
 }
