@@ -11,6 +11,7 @@ module.exports = {
     extend: {
       backgroundImage: {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
+        "gradient-h": "linear-gradient(to bottom, #172554 0%, #050914 100%)",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
@@ -19,6 +20,7 @@ module.exports = {
         "h-blue-1": "#050914",
         "h-blue-2": "#304878",
         "h-blue-3": "#7890a8",
+        "h-blue-4": "#0a1229",
         "h-black": "#000",
         "h-text": "#ebeffa",
         "h-linkedin-2": "#258cf4",
