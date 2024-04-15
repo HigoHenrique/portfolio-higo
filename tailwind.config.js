@@ -25,7 +25,6 @@ module.exports = {
         "h-text": "#ebeffa",
         "h-linkedin-2": "#258cf4",
         "h-linkedin": "#004182",
-
       },
       keyframes: {
         fadeIn: {

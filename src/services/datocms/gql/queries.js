@@ -25,7 +25,7 @@ export const PROJECT_QUERY = `query MyQuery {
     active
     description
     siteImage {
-      responsiveImage(imgixParams: {h: "100", w: "100", fit: scale, auto: format}) {
+      responsiveImage(imgixParams: {h: "500", w: "700", fit: scale, auto: enhance}) {
         src
         title
         width
@@ -73,3 +73,28 @@ export const CARD_PROJECT_QUERY = `query MyQuery {
 }
 
 `
+
+export const PROJECT_DETAIL_QUERY_ID = (id) => {
+  return (`query MyQuery {
+    project(filter: {id: {eq: "${id}"}, AND: {active: {eq: "true"}}}) {
+      description
+      repositoryLink
+      linkSite
+      title
+      stacks {
+        name
+        image {
+          responsiveImage(imgixParams: {h: "500", w: "500", fit: scale, auto: enhance}) {
+            src
+            title
+            srcSet
+            base64
+            height
+            width
+            alt
+          }
+        }
+      }
+    }
+  }`)
+}

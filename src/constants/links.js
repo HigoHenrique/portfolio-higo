@@ -4,7 +4,7 @@ export const socialMedia = [
          link:"https://www.linkedin.com/in/higo-henrique-da-silva-7a20a7234/",
          color: "bg-h-linkedin",
          secondColor:"hover:bg-h-linkedin-2",
-         icon:"/Linkedin-02.svg"
+         icon:"/linkedin.svg"
     },
     {
         name: "GitHub",
