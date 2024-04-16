@@ -26,7 +26,7 @@ export default function ProjectCard({title, linkSite, repositoryLink,siteImage, 
                     link={repositoryLink}
                     name="Acessar o repositório no Github"
                 />
-            <Link target="_blank" href={`/project/${id}`}>
+            <Link href={`/project/${id}`}>
                 <h2 className="animate-bounce mt-10 lg:text-lg hover:underline text-center">Ver Detalhes</h2>
             </Link>
             </div>

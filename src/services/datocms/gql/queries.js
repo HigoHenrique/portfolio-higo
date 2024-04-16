@@ -82,6 +82,7 @@ export const PROJECT_DETAIL_QUERY_ID = (id) => {
       linkSite
       title
       stacks {
+        id
         name
         image {
           responsiveImage(imgixParams: {h: "500", w: "500", fit: scale, auto: enhance}) {
@@ -98,3 +99,43 @@ export const PROJECT_DETAIL_QUERY_ID = (id) => {
     }
   }`)
 }
+
+export const ABOUT_QUERY = `query MyQuery {
+  about {
+    id
+    aboutMe
+    imgMe {
+      responsiveImage(imgixParams: {h: "500", w: "500", fit: scale, auto: enhance}){
+        src
+        title
+        srcSet
+        base64
+        height
+        width
+        alt
+      }
+    }
+  }
+}`
+
+export const ALL_CONTACT_QUERY = `
+query MyQuery {
+  allContacts(filter: {active: {eq: "true"}}) {
+    id
+    name
+    contactContent
+    description
+    image {
+      responsiveImage(imgixParams: {h: "200", w: "200", fit: scale, auto: enhance}) {
+        src
+        title
+        srcSet
+        base64
+        height
+        width
+        alt
+      }
+    }
+  }
+}
+`
