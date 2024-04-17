@@ -1,9 +1,11 @@
 import { performRequest } from "@/services/datocms/lib/datocms";
 import { Image as DatoImage } from "react-datocms";
 import {ABOUT_QUERY} from '@/services/datocms/gql/queries';
+import { revalidatePath } from "next/cache";
 
 export default async function About() {
     const { data: {about} } = await performRequest({ query: ABOUT_QUERY });
+    revalidatePath("/about", "page")
     return(
         <div className="lg:flex lg:mx-auto mx-5 justify-center lg:text-center mt-10 lg:p-10">
                 <DatoImage className=" lg:w-1/3 lg:h-1/2 lg:m-2 rounded-xl border-8" data={about.imgMe.responsiveImage}/>

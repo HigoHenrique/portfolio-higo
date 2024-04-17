@@ -3,10 +3,12 @@ import { PROJECT_DETAIL_QUERY_ID } from "@/services/datocms/gql/queries";
 import NotFound from "@/app/not-found";
 import Tech from "@/components/tech";
 import Button from "@/components/button/button";
+import { revalidatePath } from "next/cache";
 
 export default async function ProjectDetail({params}) {
     const gql = PROJECT_DETAIL_QUERY_ID(params.id);
     const { data } = await performRequest({ query: gql });
+    revalidatePath("/project/[id]", "page")
     if(data){
         const project = await data.project;
         const techList = project.stacks

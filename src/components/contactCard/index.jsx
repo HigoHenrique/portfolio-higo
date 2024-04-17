@@ -2,9 +2,11 @@ import { ALL_CONTACT_QUERY } from "@/services/datocms/gql/queries";
 import { performRequest } from "@/services/datocms/lib/datocms";
 import { Image as DatoImage } from "react-datocms";
 import Link from "next/link";
+import { revalidatePath } from "next/cache";
 
 export default async function ContactCard() {
     const { data: {allContacts} } = await performRequest({ query: ALL_CONTACT_QUERY });
+    revalidatePath("/contact", "page")
     return(
         <div className="lg:flex justify-center align-middle mx-auto" >
             {allContacts.map(contact =>{
