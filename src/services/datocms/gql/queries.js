@@ -1,20 +1,20 @@
 export const TECH_QUERY = `query MyQuery {
-    allTeches {
-      name
-      id
-      image {
-        responsiveImage(imgixParams: {fit: scale, h: "400", w: "400", auto: format}) {
-          src
-          title
-          width
-          sizes
-          height
-          alt
-          base64
-        }
+  allTeches(filter: {mainTech: {eq: "true"}}) {
+    name
+    id
+    image {
+      responsiveImage(imgixParams: {fit: scale, h: "400", w: "400", auto: format}) {
+        src
+        title
+        width
+        sizes
+        height
+        alt
+        base64
       }
     }
-  }`;
+  }
+}`;
 
 export const PROJECT_QUERY = `query MyQuery {
   allProjects(filter: {active: {eq: "true"}}) {
