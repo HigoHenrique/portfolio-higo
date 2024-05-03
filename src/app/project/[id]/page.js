@@ -21,8 +21,8 @@ export default async function ProjectDetail({params}) {
                     {project.description}
                 </p>
                 <div className="lg:flex p-1 justify-center mx-auto">
-                    <Button link={project.repositoryLink} name="Site"/>
-                    <Button link={project.linkSite} name="Repositório"/>
+                    <Button link={project.repositoryLink} name="Repositório"/>
+                    <Button link={project.linkSite} name="Site"/>
                 </div>
                 <div className="px-15">
                     <Tech
