@@ -16,7 +16,7 @@ export default async function Home() {
         <div className=" border-b-2 border-h-blue-1/25">
             <Tech
               techList={allTeches}
-              title="Principais Linguagens"
+              title="Principais habilidades"
             />
           </div>
           <div className="w-full block">
